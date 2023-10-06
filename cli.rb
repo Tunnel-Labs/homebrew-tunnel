@@ -1,4 +1,4 @@
-class Tunnel < Formula
+class Cli < Formula
   desc "Tunnel CLI"
   homepage "https://tunnel.dev"
   version "0.4.47"
