@@ -22,4 +22,23 @@ class Tunnel < Formula
       end
     end
   end
+
+  on_linux do
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://registry.npmjs.org/@tunnel/cli-single-executable-application-linux-arm64/-/cli-single-executable-application-linux-arm64-0.4.47.tgz"
+      sha256 "ae82d15dfa0f49231ec94c74b66a42d14ab0d234f2154250ac9e5fa586d8ce8f"
+
+      def install
+        bin.install "leaf"
+      end
+    end
+    if Hardware::CPU.intel?
+      url "https://registry.npmjs.org/@tunnel/cli-single-executable-application-linux-x64/-/cli-single-executable-application-linux-x64-0.4.47.tgz"
+      sha256 "a4cb4793adbbc032a770dd0bfdbadb8620c73ec49028200b2ba6cd728155fd0e"
+
+      def install
+        bin.install "leaf"
+      end
+    end
+  end
 end
