@@ -2,7 +2,6 @@ class Tunnel < Formula
   desc "Tunnel CLI"
   homepage "https://tunnel.dev"
   version "0.4.47"
-  depends_on :macos
 
   on_macos do
     if Hardware::CPU.arm?
