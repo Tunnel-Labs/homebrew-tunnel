@@ -1,37 +1,37 @@
 class TunnelCli < Formula
 	desc "Tunnel CLI"
 	homepage "https://tunnel.dev"
-	version "0.4.64"
+	version "0.4.65"
 	depends_on :macos
 
 	bottle do
-		root_url "https://github.com/Tunnel-Labs/homebrew-tunnel/releases/download/v0.4.64"
-		sha256 cellar: :any, arm64_ventura: "a92ada3a036a6840a03d1ab40d030ab3d3900eaaf9549b3ac568ca19d99d7d41"
-		sha256 cellar: :any, arm64_monterey: "a92ada3a036a6840a03d1ab40d030ab3d3900eaaf9549b3ac568ca19d99d7d41"
-		sha256 cellar: :any, arm64_big_sur: "a92ada3a036a6840a03d1ab40d030ab3d3900eaaf9549b3ac568ca19d99d7d41"
-		sha256 cellar: :any, ventura: "67994f4693e0a71d3ef5794bf81b080089ff6234dacb7fa17377a489eefbd075"
-		sha256 cellar: :any, monterey: "67994f4693e0a71d3ef5794bf81b080089ff6234dacb7fa17377a489eefbd075"
-		sha256 cellar: :any, big_sur: "67994f4693e0a71d3ef5794bf81b080089ff6234dacb7fa17377a489eefbd075"
-		sha256 cellar: :any, catalina: "a92ada3a036a6840a03d1ab40d030ab3d3900eaaf9549b3ac568ca19d99d7d41"
-		sha256 cellar: :any, mojave: "a92ada3a036a6840a03d1ab40d030ab3d3900eaaf9549b3ac568ca19d99d7d41"
-		sha256 cellar: :any, high_sierra: "a92ada3a036a6840a03d1ab40d030ab3d3900eaaf9549b3ac568ca19d99d7d41"
-		sha256 cellar: :any, sierra: "a92ada3a036a6840a03d1ab40d030ab3d3900eaaf9549b3ac568ca19d99d7d41"
-		sha256 cellar: :any, el_capitan: "a92ada3a036a6840a03d1ab40d030ab3d3900eaaf9549b3ac568ca19d99d7d41"
-		sha256 cellar: :any, x86_64_linux: "b1b69675e32eccc047b19072c7b894897b3056a7c006b64e26736cf04136c9ce"
+		root_url "https://github.com/Tunnel-Labs/homebrew-tunnel/releases/download/v0.4.65"
+		sha256 cellar: :any, arm64_ventura: "aa5fd172d61325f0c80375beca062a16299939b6c0ee6a0fd60262507cfe9fd3"
+		sha256 cellar: :any, arm64_monterey: "aa5fd172d61325f0c80375beca062a16299939b6c0ee6a0fd60262507cfe9fd3"
+		sha256 cellar: :any, arm64_big_sur: "aa5fd172d61325f0c80375beca062a16299939b6c0ee6a0fd60262507cfe9fd3"
+		sha256 cellar: :any, ventura: "e67a9598e2341299da7c1841d3e25ba62c6f1c3215822f60c63fbdd0591f6c67"
+		sha256 cellar: :any, monterey: "e67a9598e2341299da7c1841d3e25ba62c6f1c3215822f60c63fbdd0591f6c67"
+		sha256 cellar: :any, big_sur: "e67a9598e2341299da7c1841d3e25ba62c6f1c3215822f60c63fbdd0591f6c67"
+		sha256 cellar: :any, catalina: "aa5fd172d61325f0c80375beca062a16299939b6c0ee6a0fd60262507cfe9fd3"
+		sha256 cellar: :any, mojave: "aa5fd172d61325f0c80375beca062a16299939b6c0ee6a0fd60262507cfe9fd3"
+		sha256 cellar: :any, high_sierra: "aa5fd172d61325f0c80375beca062a16299939b6c0ee6a0fd60262507cfe9fd3"
+		sha256 cellar: :any, sierra: "aa5fd172d61325f0c80375beca062a16299939b6c0ee6a0fd60262507cfe9fd3"
+		sha256 cellar: :any, el_capitan: "aa5fd172d61325f0c80375beca062a16299939b6c0ee6a0fd60262507cfe9fd3"
+		sha256 cellar: :any, x86_64_linux: "50e81268513449fb44184dbc666c2f0221129fcec69f28782c4150cbf7d753e6"
 	end
 
 	on_macos do
 		if Hardware::CPU.arm?
-			url "https://registry.npmjs.org/@tunnel/cli-single-executable-application-darwin-arm64/-/cli-single-executable-application-darwin-arm64-0.4.64.tgz"
-			sha256 "12ada28b412e9644e8fa9f8cdf61959abd9ac7f284161d0302eea7615375c8ef"
+			url "https://registry.npmjs.org/@tunnel/cli-single-executable-application-darwin-arm64/-/cli-single-executable-application-darwin-arm64-0.4.65.tgz"
+			sha256 "d9e73d1219d12e90bba5d95f5bba0e1df1a3a5ab1f8789f5af88e4be4302d52d"
 
 			def install
 				bin.install "tunnel"
 			end
 		end
 		if Hardware::CPU.intel?
-			url "https://registry.npmjs.org/@tunnel/cli-single-executable-application-darwin-x64/-/cli-single-executable-application-darwin-x64-0.4.64.tgz"
-			sha256 "54a415f8cc841245ff5cba99c2874b2911aae03f62fe4169a024402f2b774562"
+			url "https://registry.npmjs.org/@tunnel/cli-single-executable-application-darwin-x64/-/cli-single-executable-application-darwin-x64-0.4.65.tgz"
+			sha256 "95af4f745a1115d59f5ae3d97c43d24fe3e7db41cd9550e5d1321afd8c2a62b7"
 
 			def install
 				bin.install "tunnel"
@@ -41,16 +41,16 @@ class TunnelCli < Formula
 
 	on_linux do
 		if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-			url "https://registry.npmjs.org/@tunnel/cli-single-executable-application-linux-arm64/-/cli-single-executable-application-linux-arm64-0.4.64.tgz"
-			sha256 "a2f8a0e35cfd5183de61ed3959bb126cece745afd1144c0920128898e390f981"
+			url "https://registry.npmjs.org/@tunnel/cli-single-executable-application-linux-arm64/-/cli-single-executable-application-linux-arm64-0.4.65.tgz"
+			sha256 "4ca2e877bb0ae11f3b126bc50f4ee35a2ebb9dedef89a79106001e21c60fb7fd"
 
 			def install
 				bin.install "leaf"
 			end
 		end
 		if Hardware::CPU.intel?
-			url "https://registry.npmjs.org/@tunnel/cli-single-executable-application-linux-x64/-/cli-single-executable-application-linux-x64-0.4.64.tgz"
-			sha256 "39d529afbf7ebef716ccd9a30eed82fd29138452b2cf10ec70bd76d8a0773c79"
+			url "https://registry.npmjs.org/@tunnel/cli-single-executable-application-linux-x64/-/cli-single-executable-application-linux-x64-0.4.65.tgz"
+			sha256 "adfe29ce33d59dbddf81d4bb16c9e2d85916d37fa7f3a23947d10f24e9df787c"
 
 			def install
 				bin.install "leaf"
