@@ -4,7 +4,7 @@ class Tunnel < Formula
 	version "0.4.63"
 	depends_on :macos
 
-	do
+	bottle do
 		sha256 cellar: :any, arm64_ventura: "3046e18d2abeea71e3299b584dd69c01433d9c7e9921a627166e4990188ccc7f"
 		sha256 cellar: :any, arm64_monterey: "3046e18d2abeea71e3299b584dd69c01433d9c7e9921a627166e4990188ccc7f"
 		sha256 cellar: :any, arm64_big_sur: "3046e18d2abeea71e3299b584dd69c01433d9c7e9921a627166e4990188ccc7f"
